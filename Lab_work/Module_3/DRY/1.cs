@@ -43,3 +43,10 @@ public class OrderService
         Console.WriteLine($"Order for {productName} updated. New total: {updatedPrice}");
     } /* из того что я знаю в моем ответе я использую принцип DRY и убираю дублирование кода используя другую логику для UpdateOrder */
 }
+/*
+результаты теста:
+Order for Car created. Total: 2000
+Order for Car updated. New total: 6000
+Order for Bike created. Total: 2000
+Order for Bike updated. New total: 4000
+*/
