@@ -22,13 +22,13 @@ public class Librarian
         library.Lend_book(reader1, book1);
         library.Lend_book(reader2, book2);
 
-        // попытка взять книгу у которой закончились копий 
+        /* попытка взять книгу у которой закончились копий */ 
         library.Lend_book(reader2, book2);
 
         library.Return_book(reader1, book1);
         library.Return_book(reader2, book2);
 
-        // попытка вернуть книгу которую не взяли
+        /* попытка вернуть книгу которую не взяли */
         library.Return_book(reader2, book2);
     }
 }
