@@ -1,4 +1,4 @@
-Произведите корректную (правильную) по вашему мнению реализацию с применением принципа DRY:
+/*Произведите корректную (правильную) по вашему мнению реализацию с применением принципа DRY:
 Использование общих базовых классов:
 public class Car
 {
@@ -21,9 +21,9 @@ public class Truck
     {
         Console.WriteLine("Truck is stopping");
     }
-}
+}*/
 
-Мой ответ:
+/*Мой ответ:*/
 using System;
 public class Program
 {
@@ -48,7 +48,8 @@ public class vechicle
     {
         Console.WriteLine("vechicle is stopping");
     }
-} /* я создал обший класс Vechicle и добавил в него 2 виртуальных метода start и stop чтобы перезаписать их в классах Car и Truck так как в начальном коде эти методы дублировались */
+} /* я создал обший класс Vechicle и добавил в него 2 виртуальных метода start и stop 
+чтобы перезаписать их в классах Car и Truck так как в начальном коде эти методы дублировались */
 public class Car : vechicle
 {
     public override void start()
