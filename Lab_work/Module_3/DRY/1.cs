@@ -1,4 +1,4 @@
-Произведите корректную (правильную) по вашему мнению реализацию с применением принципа DRY:
+/*Произведите корректную (правильную) по вашему мнению реализацию с применением принципа DRY:
 
 Использование методов для устранения дублирования кода
 public class OrderService
@@ -13,9 +13,9 @@ public class OrderService
         double totalPrice = quantity * price;
         Console.WriteLine($"Order for {productName} updated. New total: {totalPrice}");
     }
-}
+}*/
 
-Мой отыет:
+/*Мой отыет:*/
 using System;
 class Program
 {
