@@ -33,3 +33,41 @@ public class DiscountCalculator
 Если потребуется добавить новый тип клиента, например, Platinum, то потребуется модифицировать метод CalculateDiscount, что нарушает принцип OCP.
 Необходимо используя полиморфизм, сделать класс DiscountCalculator открытым для расширения, но закрытым для модификации.
 */
+/*мой ответ*/
+public interface IDiscountStrategy
+{
+    double CalculateDiscount(double amount);
+}
+public class RegularDiscount : IDiscountStrategy
+{
+    public double CalculateDiscount(double amount)
+    {
+        return amount; 
+    }
+}
+public class SilverDiscount : IDiscountStrategy
+{
+    public double CalculateDiscount(double amount)
+    {
+        return amount * 0.9; // 10% скидка
+    }
+}
+public class GoldDiscount : IDiscountStrategy
+{
+    public double CalculateDiscount(double amount)
+    {
+        return amount * 0.8; // 20% скидка
+    }
+}
+public class DiscountCalculator
+{
+    private readonly IDiscountStrategy _discountStrategy;
+    public DiscountCalculator(IDiscountStrategy discountStrategy)
+    {
+        _discountStrategy = discountStrategy;
+    }
+    public double CalculateDiscount(double amount)
+    {
+        return _discountStrategy.CalculateDiscount(amount);
+    }
+}
