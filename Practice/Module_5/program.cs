@@ -7,10 +7,21 @@ public class program
 {
     public static void Main(string[] args)
     {
-       GetDocument(DocType.Report).Open();
-       GetDocument(DocType.Resume).Open();
-       GetDocument(DocType.Letter).Open();
-       GetDocument(DocType.Invoice).Open();
+        /*GetDocument(DocType.Report).Open();
+        GetDocument(DocType.Resume).Open();
+        GetDocument(DocType.Letter).Open();
+        GetDocument(DocType.Invoice).Open();*/
+
+        Console.WriteLine("Enter a Document Type to open: ");
+        string UserChoice = Console.ReadLine();
+        if (Enum.TryParse(UserChoice, true, out DocType docType))
+        {
+            GetDocument(docType).Open();
+        }
+        else
+        {
+            Console.WriteLine("this type of documenr does not exist");
+        }
     }
 
     public static IDocument GetDocument(DocType docType)
