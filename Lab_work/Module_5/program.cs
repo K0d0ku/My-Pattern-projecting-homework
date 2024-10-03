@@ -10,7 +10,7 @@ public class program
         string UserChoice = Console.ReadLine();
         if (Enum.TryParse(UserChoice, true, out TransportType transportType))
         {
-            Transport transport = GetTransport(transportType);
+            ITransport transport = GetTransport(transportType);
             Console.WriteLine("Enter the Transport model: ");
             transport.Model = Console.ReadLine();
             Console.WriteLine("Enter the transport speed: ");
@@ -31,10 +31,10 @@ public class program
             Console.WriteLine("this type of factory does not exist");
         }
     }
-    public static Transport GetTransport(TransportType transportType)
+    public static ITransport GetTransport(TransportType transportType)
     {
         TransportFactory creator = null;
-        Transport transport = null; 
+        ITransport transport = null; 
         switch (transportType)
         {
             case TransportType.Car:
@@ -55,14 +55,14 @@ public class program
         return creator.CreateTransport();
     }
 }
-public interface Transport
+public interface ITransport
 {
     void Move();
     void FuelUp();
     string Model { get; set; }
     int speed { get; set; } /*i could also use double but i didnt want to*/
 }
-public class Car : Transport
+public class Car : ITransport
 {
     public void Move()
     {
@@ -75,7 +75,7 @@ public class Car : Transport
     public string Model { get; set; }
     public int speed { get; set; }
 }
-public class Motorcycle : Transport
+public class Motorcycle : ITransport
 {
     public void Move()
     {
@@ -88,7 +88,7 @@ public class Motorcycle : Transport
     public string Model { get; set; }
     public int speed { get; set; }
 }
-public class Plane : Transport
+public class Plane : ITransport
 {
     public void Move()
     {
@@ -101,7 +101,7 @@ public class Plane : Transport
     public string Model { get; set; }
     public int speed { get; set; }
 }
-public class Bicycle : Transport
+public class Bicycle : ITransport
 {
     public void Move()
     {
@@ -116,32 +116,32 @@ public class Bicycle : Transport
 }
 public abstract class TransportFactory
 {
-    public abstract Transport CreateTransport();
+    public abstract ITransport CreateTransport();
 }
 public class CarFactory : TransportFactory
 {
-    public override Transport CreateTransport()
+    public override ITransport CreateTransport()
     {
         return new Car();
     }
 }
 public class MotorcycleFactory : TransportFactory
 {
-    public override Transport CreateTransport()
+    public override ITransport CreateTransport()
     {
         return new Motorcycle();
     }
 }
 public class PlaneFactory : TransportFactory
 {
-    public override Transport CreateTransport()
+    public override ITransport CreateTransport()
     {
         return new Plane();
     }
 }
 public class BicycleFactory : TransportFactory
 {
-    public override Transport CreateTransport()
+    public override ITransport CreateTransport()
     {
         return new Bicycle();
     }
