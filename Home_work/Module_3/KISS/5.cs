@@ -1,14 +1,8 @@
-/*Избегание избыточного использования исключений
 public int Divide(int a, int b)
 {
-    try
+    if (b == 0)
     {
-        return a / b;
+        return 0;/*если B ровен 0 то возвращяем 0*/
     }
-    catch (DivideByZeroException)
-    {
-        return 0;
-    }
-}*/
-
-/**/
+    return a / b;
+}
