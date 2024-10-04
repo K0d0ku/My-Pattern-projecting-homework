@@ -1,35 +1,42 @@
-/*Произведите корректную (правильную) по вашему мнению реализацию с применением принципа Open-Closed Principle, OCP:
-Расчет зарплаты сотрудников
-В этом примере класс EmployeeSalaryCalculator нарушает принцип OCP, так как для добавления новой логики расчета зарплаты приходится изменять код метода CalculateSalary.
+using System;
 public class Employee
 {
     public string Name { get; set; }
     public double BaseSalary { get; set; }
     public string EmployeeType { get; set; } // "Permanent", "Contract", "Intern"
 }
-
-public class EmployeeSalaryCalculator
+public interface IEmployeeTypeSalary
 {
-    public double CalculateSalary(Employee employee)
+    public double CalculateSalary(double BaseSalary);
+    /*i could make this an abstract so ebery time this function is called it does not break DRY and
+    on an abstract class i can store the method with the value too that is can be overridden ebery 
+    time its called, i just noted that*/
+}
+public class EmployeePermanent : IEmployeeTypeSalary
+{
+    public double CalculateSalary(double BaseSalary)
     {
-        if (employee.EmployeeType == "Permanent")
-        {
-            return employee.BaseSalary * 1.2; // Permanent employee gets 20% bonus
-        }
-        else if (employee.EmployeeType == "Contract")
-        {
-            return employee.BaseSalary * 1.1; // Contract employee gets 10% bonus
-        }
-        else if (employee.EmployeeType == "Intern")
-        {
-            return employee.BaseSalary * 0.8; // Intern gets 80% of the base salary
-        }
-        else
-        {
-            throw new NotSupportedException("Employee type not supported");
-        }
+        return BaseSalary * 1.2;
     }
 }
-Проблемы:
-•	Если нужно добавить новый тип сотрудника, например, "Freelancer", придется изменить метод CalculateSalary. Это нарушает принцип OCP, так как мы изменяем уже существующий код, что может привести к ошибкам.
-*/
+public class EmployeeContract : IEmployeeTypeSalary
+{
+    public double CalculateSalary(double BaseSalary) 
+    {
+        return BaseSalary * 1.1;
+    }
+}
+public class EmployeeIntern : IEmployeeTypeSalary
+{
+    public double CalculateSalary (double BaseSalary) 
+    {
+        return BaseSalary * 0.8;
+    }
+}
+public class EmployeeFreelancer : IEmployeeTypeSalary
+{
+    public double CalculateSalary(double BaseSalary)
+    {
+        return BaseSalary * 1.0;
+    }
+}
