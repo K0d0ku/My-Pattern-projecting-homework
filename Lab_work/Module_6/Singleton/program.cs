@@ -1,3 +1,5 @@
+/*in my defence, the singleton part of the lab work has almost and even less , but exactly the same task that we did in practice singleton*/
+
 using System;
 using System.IO;
 using System.Net.Http.Json;
