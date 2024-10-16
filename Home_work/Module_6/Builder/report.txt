@@ -1,0 +1,5 @@
+updated Text report header
+updated main content for Text report.
+updated text report footer.
+updated section 1: updated content for section 1
+section 2: content for section 2
