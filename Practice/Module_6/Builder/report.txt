@@ -1,0 +1,5 @@
+report header
+main content for report.
+report footer
+section 1: content for section 1
+section 2: content for section 2
