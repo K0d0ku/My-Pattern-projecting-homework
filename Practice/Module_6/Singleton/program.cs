@@ -1,12 +1,11 @@
-/*this was hard and i barely understand what i did here, and some of the solutions were searched from stackoverflow 
-and github because the owner of this repository (for the current time only) is dumb#ss*/
+/*this was hard, this specific one was hard to code (cuz i am stupid), 
+and adding datetime filtering was very hard*/
 
 using System;
 using System.IO;
-using System.Net.Http.Json;
 using System.Text.Json;
 /*Singleton*/
-public class program
+public class Program
 {
     public static void Main(string[] args)
     {
@@ -21,14 +20,19 @@ public class program
         Task task2 = Task.Run(() => LogMessaging(LogLevel.Warning));
         Task task3 = Task.Run(() => LogMessaging(LogLevel.Error));
         Task.WaitAll(task1, task2, task3);
-
         logger.SetLevel(LogLevel.Warning);
-        Task task4 = Task.Run(() => LogMessaging(LogLevel.Warning));/*wont*/
-        Task task5 = Task.Run(() => LogMessaging(LogLevel.Error));/*will*/
+        Task task4 = Task.Run(() => LogMessaging(LogLevel.Warning));
+        Task task5 = Task.Run(() => LogMessaging(LogLevel.Error));
         Task.WaitAll(task4, task5);
 
         LogReader logReader = new LogReader();
-        logReader.LogLoader();
+        Console.WriteLine("\nlog from specific time:");
+        logReader.LogLoader(DateTime.Parse("2024-10-16 18:40:00"), DateTime.Parse("2024-10-16 18:42:05"));
+        /*for the 2nd parse i couldnt figure out a way to get a data from the log itself cause after the file rotation everythin in the original 
+         log file is transported to a new rotation, do get the specific date from log i have to make the code be able to read the entire direcotry and all of its files
+        named Log i think*/
+        Console.WriteLine("\nwarning lvl logs:");
+        logReader.LogLoader(logLevel: LogLevel.Warning);
 
         /*logger.SetLevel(LogLevel.Warning);
         logger.Log("warning log msg", LogLevel.Warning);//1
@@ -37,44 +41,44 @@ public class program
     private static void LogMessaging(LogLevel level)
     {
         Logger logger = Logger.GetInstance();
-        logger.SetLevel(level);
         for (int i = 0; i < 6; i++)
         {
-            Logger.GetInstance().Log($"{level} msg {i + 1}", level);
+            logger.Log($"{level} msg {i + 1}", level);
         }
     }
- }
+}
 public enum LogLevel
 {
     Info, Warning, Error
 }
 public class Logger
 {
-    private Logger() 
-    {
-        //
-    }
+    private Logger() { }
     private static Logger _logger;
-    public static LogLevel _level = LogLevel.Info;
-    
     private static readonly object _lock = new object();
-
+    public static LogLevel _level = LogLevel.Info;
     private string logPath = @"C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\6\txt\log.txt";
-    private const long MaxSizeLog = 2048;
+    private const long MaxSizeLog = 4096;/*had to change it to 4kb cuz 2kb kept getting full too fast with datetime filtering*/
     public static Logger GetInstance()
     {
         if (_logger == null)
-            _logger = new Logger();
+        {
+            lock (_lock)
+            {
+                if (_logger == null)
+                    _logger = new Logger();
+            }
+        }
         return _logger;
     }
-    public void SetLevel (LogLevel level)
+    public void SetLevel(LogLevel level)
     {
         lock (_lock)
         {
             _level = level;
-            Console.WriteLine($"level changed to: {_level}");
+            Console.WriteLine($"log lvl changed to: {_level}");
         }
-    } 
+    }
     public void Log(string message, LogLevel level)
     {
         if (_level <= level)
@@ -87,7 +91,8 @@ public class Logger
                 }
                 /*File.WriteAllText(@"C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\6\txt\log.txt", "New logs \n");*/
                 /*the line that is commented in here only writes new changes with every new execution of code, i was using that untill i got to "Дополнительные задачи:"*/
-                File.AppendAllText(logPath, level + " | " + message + Environment.NewLine);
+                string logEntry = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} | {level} | {message}";
+                File.AppendAllText(logPath, logEntry + Environment.NewLine);
             }
         }
         /*if (_level == level)
@@ -110,7 +115,7 @@ public class Logger
         }
         else
         {
-            Console.WriteLine("config file have not been found");
+            Console.WriteLine("config file have not been found.");
         }
     }
     public void LogFileRotation()
@@ -118,18 +123,35 @@ public class Logger
         string newLogFileName = $"{Path.GetFileNameWithoutExtension(logPath)}_{DateTime.Now:yyyyMMdd_HHmmss}{Path.GetExtension(logPath)}";
         string newLogFilePath = Path.Combine(Path.GetDirectoryName(logPath), newLogFileName);
         File.Move(logPath, newLogFilePath);
-        Console.WriteLine($"new log file have been crated: {newLogFilePath}");
+        Console.WriteLine($"new log file have been rotared: {newLogFilePath}");
     }
 }
 public class LogReader
 {
-    public void LogLoader()
+    private string logPath = @"C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\6\txt\log.txt";
+    public void LogLoader(DateTime? startTime = null, DateTime? endTime = null, LogLevel? logLevel = null)
     {
-        string logPath = @"C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\6\txt\log.txt";
         if (File.Exists(logPath))
         {
-            string txt = File.ReadAllText(logPath);
-            Console.WriteLine(txt);
+            string[] logLines = File.ReadAllLines(logPath);
+            foreach (var line in logLines)
+            {
+                string[] parts = line.Split('|');
+                if (parts.Length >= 3)
+                {
+                    DateTime logTime = DateTime.Parse(parts[0].Trim());
+                    LogLevel level = Enum.Parse<LogLevel>(parts[1].Trim());
+
+                    if (startTime.HasValue && logTime < startTime.Value)
+                        continue;
+                    if (endTime.HasValue && logTime > endTime.Value)
+                        continue;
+                    if (logLevel.HasValue && level != logLevel.Value)
+                        continue;
+
+                    Console.WriteLine(line);
+                }
+            }
         }
         else
         {
