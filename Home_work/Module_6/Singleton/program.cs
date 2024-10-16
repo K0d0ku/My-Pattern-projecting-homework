@@ -1,4 +1,9 @@
-/*i hardly understand how i even coded this*/
+/*i hardly understand how i even coded this
+output:
+hasAccount: Welcome
+noAccount: Reister
+logOut: GoodBye
+hasAccount (after change): Greetings*/
 
 using System;
 using System.Collections.Generic;
