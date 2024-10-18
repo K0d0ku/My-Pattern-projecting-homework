@@ -1,0 +1,5 @@
+subs report:
+----------------------------
+Trader: notified 3 times
+Trader: notified 2 times
+AutoTradingRobot: notified 2 times

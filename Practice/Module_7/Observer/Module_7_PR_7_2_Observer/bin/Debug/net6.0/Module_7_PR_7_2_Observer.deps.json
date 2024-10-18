@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Module_7_PR_7_2_Observer/1.0.0": {
+        "runtime": {
+          "Module_7_PR_7_2_Observer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Module_7_PR_7_2_Observer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

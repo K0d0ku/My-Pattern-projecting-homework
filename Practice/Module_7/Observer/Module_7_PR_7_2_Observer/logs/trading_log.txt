@@ -1,0 +1,7 @@
+10/18/2024 9:50:58 PM: trader Kuro notified: Nvidia is now 250
+10/18/2024 9:50:58 PM: trader Baha notified: Nvidia is now 250
+10/18/2024 9:50:59 PM: trader Kuro notified: Intel is now 150
+10/18/2024 9:51:00 PM: AutoTradingRobot: selling Nvidia at 390
+10/18/2024 9:51:00 PM: trader Baha notified: Nvidia is now 390
+10/18/2024 9:51:00 PM: trader Kuro notified: Nvidia is now 390
+10/18/2024 9:51:01 PM: AutoTradingRobot: buying Intel at 80

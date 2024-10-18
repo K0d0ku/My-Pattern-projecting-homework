@@ -1,0 +1,15 @@
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\bin\Debug\net6.0\Module_7_PR_7_2_Observer.exe
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\bin\Debug\net6.0\Module_7_PR_7_2_Observer.deps.json
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\bin\Debug\net6.0\Module_7_PR_7_2_Observer.runtimeconfig.json
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\bin\Debug\net6.0\Module_7_PR_7_2_Observer.dll
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\bin\Debug\net6.0\Module_7_PR_7_2_Observer.pdb
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.csproj.AssemblyReference.cache
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.AssemblyInfoInputs.cache
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.AssemblyInfo.cs
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.csproj.CoreCompileInputs.cache
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.dll
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\refint\Module_7_PR_7_2_Observer.dll
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.pdb
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\Module_7_PR_7_2_Observer.genruntimeconfig.cache
+C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\obj\Debug\net6.0\ref\Module_7_PR_7_2_Observer.dll
