@@ -9,7 +9,7 @@ public class program
     {
         string logFilePath = @"C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\logs\trading_log.txt";
         string reportFilePath = @"C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\practice\7\Module_7_PR_7_2_Observer\reports\subscriber_report.txt";
-
+        /*UPDATE, the logs and reports have been executed to separate folders logs and reports within the project*/
         Logger logger = new Logger(logFilePath);
         StockExchange stockExchange = new StockExchange();
 
