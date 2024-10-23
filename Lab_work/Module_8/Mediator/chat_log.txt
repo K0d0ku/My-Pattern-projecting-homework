@@ -1,0 +1,77 @@
+10/23/2024 9:10:28 PM: [private msg from alisa]: Privet bob!
+
+10/23/2024 9:10:28 PM: [private msg from bob]: Privet alisa!
+
+10/23/2024 9:10:29 PM: User sent: hi @all Group 1!
+
+10/23/2024 9:10:29 PM: User sent: hi dexter in Group 1!
+
+10/23/2024 9:10:29 PM: User sent: hi @all Group 2!
+
+10/23/2024 9:10:29 PM: User sent: hi david in Group 2!
+
+10/23/2024 9:14:35 PM: [private msg from alisa]: Privet bob!
+
+10/23/2024 9:14:35 PM: [private msg from bob]: Privet alisa!
+
+10/23/2024 9:14:35 PM: User sent: hi @all Group 1!
+
+10/23/2024 9:14:35 PM: User sent: hi dexter in Group 1!
+
+10/23/2024 9:14:35 PM: User sent: hi @all Group 2!
+
+10/23/2024 9:14:35 PM: User sent: hi david in Group 2!
+
+10/23/2024 9:14:35 PM: User sent: This message should not be sent.
+10/23/2024 9:14:57 PM: [private msg from alisa]: Privet bob!
+
+10/23/2024 9:14:57 PM: [private msg from bob]: Privet alisa!
+
+10/23/2024 9:14:57 PM: User sent: hi @all Group 1!
+
+10/23/2024 9:14:57 PM: User sent: hi dexter in Group 1!
+
+10/23/2024 9:14:57 PM: User sent: hi @all Group 2!
+
+10/23/2024 9:14:57 PM: User sent: hi david in Group 2!
+
+10/23/2024 9:14:57 PM: User sent: this user now cant send msg.
+10/23/2024 9:16:01 PM: Log:[ private msg from alisa]: Privet bob!
+
+10/23/2024 9:16:01 PM: Log:[ private msg from bob]: Privet alisa!
+
+10/23/2024 9:16:01 PM: Log: User sent: hi @all Group 1!
+
+10/23/2024 9:16:01 PM: Log: User sent: hi dexter in Group 1!
+
+10/23/2024 9:16:01 PM: Log: User sent: hi @all Group 2!
+
+10/23/2024 9:16:01 PM: Log: User sent: hi david in Group 2!
+
+10/23/2024 9:16:02 PM: Log: User sent: this user now cant send msg.
+Log: 10/23/2024 9:16:34 PM: Log:[ private msg from alisa]: Privet bob!
+
+Log: 10/23/2024 9:16:34 PM: Log:[ private msg from bob]: Privet alisa!
+
+Log: 10/23/2024 9:16:34 PM: Log: User sent: hi @all Group 1!
+
+Log: 10/23/2024 9:16:34 PM: Log: User sent: hi dexter in Group 1!
+
+Log: 10/23/2024 9:16:34 PM: Log: User sent: hi @all Group 2!
+
+Log: 10/23/2024 9:16:34 PM: Log: User sent: hi david in Group 2!
+
+Log: 10/23/2024 9:16:34 PM: Log: User sent: this user now cant send msg.
+Log: 10/23/2024 9:17:43 PM: Log:[ private msg from alisa]: Privet bob!
+
+Log: 10/23/2024 9:17:43 PM: Log:[ private msg from bob]: Privet alisa!
+
+Log: 10/23/2024 9:17:43 PM: Log: User sent: hi @all Group 1!
+
+Log: 10/23/2024 9:17:43 PM: Log: User sent: hi dexter in Group 1!
+
+Log: 10/23/2024 9:17:43 PM: Log: User sent: hi @all Group 2!
+
+Log: 10/23/2024 9:17:43 PM: Log: User sent: hi david in Group 2!
+
+Log: 10/23/2024 9:17:43 PM: Log: User sent: this user now cant send msg.
