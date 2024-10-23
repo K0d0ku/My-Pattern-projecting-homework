@@ -15,11 +15,7 @@ conditioner is off.
 
 switching to energy-saving mode:
 conditioner is in energy-saving mode.
-conditioner is in regular mode.
-
-C:\Users\Bekal\Documents\my_own_documents\vs studio lol\uni\pattern\lab\8\LAB_8_Module_8\bin\Debug\net6.0\LAB_8_Module_8_Command.exe (process 28712) exited with code 0.
-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
-Press any key to close this window . . .*/
+conditioner is in regular mode.*/
 
 using System;
 using System.Runtime.InteropServices;
