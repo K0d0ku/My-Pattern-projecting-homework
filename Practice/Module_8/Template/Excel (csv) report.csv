@@ -1,0 +1,5 @@
+header,content
+"Excel report header","this is the content of the Excel report."
+"section 1","content for section 1 in Excel."
+"section 2","content for section 2 in Excel."
+"Excel report footer",""
