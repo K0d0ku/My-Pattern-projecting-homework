@@ -1,3 +1,5 @@
+/*i would also recomend you to check: FlourDough_Ingredients.cs in lab 10 composite*/
+
 /*output:
 Organization Structure:
 - Department: Human Resources [Position: Head of HR]
